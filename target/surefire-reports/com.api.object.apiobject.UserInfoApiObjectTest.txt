@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.api.object.apiobject.UserInfoApiObjectTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.805 s - in com.api.object.apiobject.UserInfoApiObjectTest
