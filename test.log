@@ -2737,3 +2737,4 @@ s
 2021-01-06 19:12:36 INFO  JsonPathUtils:39 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.*":"all change"}
 2021-01-06 19:12:41 INFO  JsonPathUtils:39 - 读取JSON文件:/json/book.json，替换的内容:{"$..book[0,1]":"first two change"}
 2021-01-06 19:12:46 INFO  MustacheUtils:43 - 读取模板文件:mustache/book.mustache，替换的内容:{"author":"mustacheAuthor","price":56.8}
+2021-01-07 13:58:33 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.book[*].author":"测试作者"}

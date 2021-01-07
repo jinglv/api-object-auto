@@ -19,15 +19,30 @@ public class JsonPathUtils {
     /**
      * 文件地址
      */
-    private final String path;
+    private String path;
     /**
-     * jsonpath对应修改的内容
+     * jsonPath对应修改的内容
      */
-    private final Map<String, Object> content;
+    private Map<String, Object> content;
+
+    /**
+     * 需要解析的json串
+     */
+    private String json;
+
+    /**
+     * jsonPath的表达式
+     */
+    private String pattern;
 
     public JsonPathUtils(String path, Map<String, Object> content) {
         this.path = path;
         this.content = content;
+    }
+
+    public JsonPathUtils(String json, String pattern) {
+        this.json = json;
+        this.pattern = pattern;
     }
 
     /**
@@ -42,5 +57,15 @@ public class JsonPathUtils {
             documentContext.set(entry.getKey(), entry.getValue());
         }
         return documentContext.jsonString();
+    }
+
+    /**
+     * 根据jsonPath表达式解析json
+     *
+     * @return 返回解析完成的内容
+     */
+    public Object readJson() {
+        logger.info("解析JSON对象:{}，jsonPath表达式:{}", this.json, this.pattern);
+        return JsonPath.read(this.json, this.pattern);
     }
 }
