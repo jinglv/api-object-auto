@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.api.object.apiobject.UserInfoApiObjectTest" time="29.708" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.api.object.apiobject.CreateUserInfoThreadTest" time="23.991" tests="3" errors="0" skipped="0" failures="2">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -63,9 +63,127 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="deleteUserInfoByUserId" classname="com.api.object.apiobject.UserInfoApiObjectTest" time="0.996"/>
-  <testcase name="updateUserInfoByUserId" classname="com.api.object.apiobject.UserInfoApiObjectTest" time="0.866"/>
-  <testcase name="creatUserInfo" classname="com.api.object.apiobject.UserInfoApiObjectTest" time="1.295"/>
-  <testcase name="findAllUserInfo" classname="com.api.object.apiobject.UserInfoApiObjectTest" time="0.768"/>
-  <testcase name="findUserInfoByUserId" classname="com.api.object.apiobject.UserInfoApiObjectTest" time="0.738"/>
+  <testcase name="creatUserInfo[1]" classname="com.api.object.apiobject.CreateUserInfoThreadTest" time="0.351"/>
+  <testcase name="creatUserInfo[2]" classname="com.api.object.apiobject.CreateUserInfoThreadTest" time="0.372">
+    <failure message="创建用户信息测试结果断言 (2 failures)&#10;	org.opentest4j.AssertionFailedError: expected: &lt;00001&gt; but was: &lt;00000&gt;&#10;	org.opentest4j.AssertionFailedError: expected: &lt;失败&gt; but was: &lt;成功&gt;" type="org.opentest4j.MultipleFailuresError"><![CDATA[org.opentest4j.MultipleFailuresError: 
+创建用户信息测试结果断言 (2 failures)
+	org.opentest4j.AssertionFailedError: expected: <00001> but was: <00000>
+	org.opentest4j.AssertionFailedError: expected: <失败> but was: <成功>
+	at com.api.object.apiobject.CreateUserInfoThreadTest.creatUserInfo(CreateUserInfoThreadTest.java:81)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8886/v1/info/user
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjEwOTU5MTAxfQ.WAaxbwq5dC8zBXyRnQmy8fxTLJ52EErVBuNhO90Xh-o
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userId": 1,
+    "userName": "小红",
+    "email": "xiaohong@qq.com",
+    "phone": "18623456543",
+    "friends": [
+        {
+            "userId": 11,
+            "userName": "小红喵",
+            "email": "xiaohongmiao@qq.com",
+            "phone": "18623456555"
+        },
+        {
+            "userId": 12,
+            "userName": "小红旺",
+            "email": "xiaohongwang@qq.com",
+            "phone": "18623456566"
+        }
+    ]
+}
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Mon, 11 Jan 2021 08:38:38 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "code": "00001",
+    "message": "失败",
+    "data": "用户已存在",
+    "success": false
+}
+{
+    "code": "00001",
+    "message": "失败",
+    "data": "用户已存在",
+    "success": false
+}
+]]></system-out>
+  </testcase>
+  <testcase name="creatUserInfo[3]" classname="com.api.object.apiobject.CreateUserInfoThreadTest" time="0.058">
+    <failure message="创建用户信息测试结果断言 (2 failures)&#10;	org.opentest4j.AssertionFailedError: expected: &lt;00001&gt; but was: &lt;00000&gt;&#10;	org.opentest4j.AssertionFailedError: expected: &lt;失败&gt; but was: &lt;成功&gt;" type="org.opentest4j.MultipleFailuresError"><![CDATA[org.opentest4j.MultipleFailuresError: 
+创建用户信息测试结果断言 (2 failures)
+	org.opentest4j.AssertionFailedError: expected: <00001> but was: <00000>
+	org.opentest4j.AssertionFailedError: expected: <失败> but was: <成功>
+	at com.api.object.apiobject.CreateUserInfoThreadTest.creatUserInfo(CreateUserInfoThreadTest.java:81)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8886/v1/info/user
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjEwOTU5MTAxfQ.WAaxbwq5dC8zBXyRnQmy8fxTLJ52EErVBuNhO90Xh-o
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "userId": 1,
+    "userName": "小红",
+    "email": "xiaohong@qq.com",
+    "phone": "18623456543",
+    "friends": [
+        {
+            "userId": 11,
+            "userName": "小红喵",
+            "email": "xiaohongmiao@qq.com",
+            "phone": "18623456555"
+        },
+        {
+            "userId": 12,
+            "userName": "小红旺",
+            "email": "xiaohongwang@qq.com",
+            "phone": "18623456566"
+        }
+    ]
+}
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Mon, 11 Jan 2021 08:38:43 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "code": "00001",
+    "message": "失败",
+    "data": "用户已存在",
+    "success": false
+}
+{
+    "code": "00001",
+    "message": "失败",
+    "data": "用户已存在",
+    "success": false
+}
+]]></system-out>
+  </testcase>
 </testsuite>

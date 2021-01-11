@@ -6,10 +6,7 @@ import com.api.object.helper.TokenHelper;
 import com.api.object.task.EvnTask;
 import com.api.object.utils.FakerUtils;
 import com.api.object.utils.MustacheUtils;
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.*;
@@ -26,7 +23,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @date 2021/01/05
  */
 @Epic("用户信息接口测试")
-@Feature("用户信息接口测试")
+@Feature("使用Junit5进行对进用户信息接口行流程测试")
+@Owner("小晶晶")
 class UserInfoApiObjectTest {
     private static final Logger logger = LoggerFactory.getLogger(UserInfoApiObjectTest.class);
 
@@ -52,6 +50,7 @@ class UserInfoApiObjectTest {
      * 创建用户信息
      */
     @Test
+    @Step("新建用户信息")
     @DisplayName("创建用户信息")
     @Story("创建用户信息")
     @Description("创建用户信息")
@@ -72,6 +71,7 @@ class UserInfoApiObjectTest {
      * 查询所有用户信息
      */
     @Test
+    @Step("查询所有用户信息")
     @DisplayName("查询所有用户信息")
     @Story("查询所有用户信息")
     @Description("查询所有用户信息")
@@ -89,6 +89,7 @@ class UserInfoApiObjectTest {
     }
 
     @Test
+    @Step("通过UserId查询用户信息")
     @DisplayName("通过UserId查询用户信息")
     @Story("通过UserId查询用户信息")
     @Description("通过UserId查询用户信息")
@@ -110,6 +111,7 @@ class UserInfoApiObjectTest {
     }
 
     @Test
+    @Step("通过UserId更新用户信息")
     @DisplayName("通过UserId更新用户信息")
     @Story("通过UserId更新用户信息")
     @Description("通过UserId更新用户信息")
@@ -139,6 +141,7 @@ class UserInfoApiObjectTest {
     }
 
     @Test
+    @Step("通过UserId删除用户信息")
     @DisplayName("通过UserId删除用户信息")
     @Story("通过UserId删除用户信息")
     @Description("通过UserId删除用户信息")

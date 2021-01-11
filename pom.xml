@@ -12,6 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.ouputEncoding>UTF-8</project.reporting.ouputEncoding>
         <java.version>1.8</java.version>
+        <aspectj.version>1.8.10</aspectj.version>
         <rest-assured.version>4.3.3</rest-assured.version>
         <slf4j.version>1.7.30</slf4j.version>
         <mustache.verison>0.9.7</mustache.verison>
@@ -60,6 +61,13 @@
             <version>2.5.0</version>
         </dependency>
 
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+        </dependency>
+
         <!--hutool工具类-->
         <dependency>
             <groupId>cn.hutool</groupId>
@@ -72,6 +80,7 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
             <version>${allure.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -93,6 +102,56 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
+                <configuration>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <systemProperties>
+                        <property>
+                            <name>junit.jupiter.extensions.autodetection.enabled</name>
+                            <value>true</value>
+                        </property>
+                        <!--设置生成allure生成报告的存放路径-->
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>${project.build.directory}/allure-results</value>
+                        </property>
+                        <!--定义相关连接匹配系统属性规则-->
+                        <property>
+                            <name>allure.link.user.pattern</name>
+                            <value>https://www.xxx.xxx/{}</value>
+                        </property>
+                        <property>
+                            <name>allure.link.issue.pattern</name>
+                            <value>https://www.xxx.xxx/{}</value>
+                        </property>
+                        <property>
+                            <name>allure.link.tms.pattern</name>
+                            <value>https://www.xxx.xxx/{}</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>1.2.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+                <configuration>
+                    <reportVersion>2.4.1</reportVersion>
+                </configuration>
             </plugin>
         </plugins>
     </build>

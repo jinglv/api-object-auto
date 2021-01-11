@@ -33,7 +33,7 @@ public class UserInfoApiObject {
                 .body(userInfoBody)
                 .post("/info/user")
                 .then()
-                .log().body()
+                .log().all()
                 .extract()
                 .response();
     }

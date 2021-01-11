@@ -1,3 +1,4 @@
+com/api/object/apiobject/Restful.class
 com/api/object/apiobject/CreateUserInfoThreadTest.class
 com/api/object/utils/JsonPathUtilsTest.class
 com/api/object/utils/MustacheUtilsTest.class
