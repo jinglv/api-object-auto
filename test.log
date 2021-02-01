@@ -1691,3 +1691,15 @@
 2021-01-11 16:39:23 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.*":"all change"}
 2021-01-11 16:39:28 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$..book[0,1]":"first two change"}
 2021-01-11 16:39:33 INFO  MustacheUtils:43 - 读取模板文件:mustache/book.mustache，替换的内容:{"author":"mustacheAuthor","price":56.8}
+2021-02-01 16:59:20 INFO  UserLoginApiObject:27 - 用户登录ApiObject，接口请求主体：{
+    "username":"xiaohong",
+    "password":"123123"
+}
+2021-02-01 16:59:31 INFO  UserLoginApiObject:27 - 用户登录ApiObject，接口请求主体：{
+    "username":"xiaohong",
+    "password":"123123"
+}
+2021-02-01 16:59:41 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.book[*].author":"测试作者"}
+2021-02-01 16:59:46 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.*":"all change"}
+2021-02-01 16:59:51 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$..book[0,1]":"first two change"}
+2021-02-01 16:59:56 INFO  MustacheUtils:43 - 读取模板文件:mustache/book.mustache，替换的内容:{"author":"mustacheAuthor","price":56.8}

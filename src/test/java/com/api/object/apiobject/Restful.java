@@ -10,7 +10,6 @@ import java.util.HashMap;
  */
 @Data
 public class Restful {
-
     public String url;
     public String method;
     public HashMap<String, Object> header = new HashMap<>();
