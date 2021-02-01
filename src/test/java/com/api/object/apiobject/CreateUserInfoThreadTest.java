@@ -52,7 +52,7 @@ class CreateUserInfoThreadTest {
 
     @BeforeAll
     static void setUp() {
-        RestAssured.baseURI = "http://localhost:8088/v1";
+        RestAssured.baseURI = "http://60.205.228.49:8088/v1";
         token = TokenHelper.getToken();
         logger.info("获取接口token：{}", token);
     }

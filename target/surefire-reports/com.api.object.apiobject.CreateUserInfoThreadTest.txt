@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.api.object.apiobject.CreateUserInfoThreadTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 12.305 s <<< FAILURE! - in com.api.object.apiobject.CreateUserInfoThreadTest
-com.api.object.apiobject.CreateUserInfoThreadTest  Time elapsed: 12.304 s  <<< ERROR!
-java.net.ConnectException: Connection refused (Connection refused)
-	at com.api.object.apiobject.CreateUserInfoThreadTest.setUp(CreateUserInfoThreadTest.java:56)
-

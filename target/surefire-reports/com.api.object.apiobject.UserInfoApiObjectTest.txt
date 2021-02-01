@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.api.object.apiobject.UserInfoApiObjectTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.038 s <<< FAILURE! - in com.api.object.apiobject.UserInfoApiObjectTest
-com.api.object.apiobject.UserInfoApiObjectTest  Time elapsed: 5.038 s  <<< ERROR!
-java.net.ConnectException: Connection refused (Connection refused)
-	at com.api.object.apiobject.UserInfoApiObjectTest.setUp(UserInfoApiObjectTest.java:36)
-
