@@ -1,6 +1,7 @@
 package com.api.object.apiobject;
 
 import cn.hutool.json.JSONUtil;
+import com.api.object.apimodel.Restful;
 import com.api.object.helper.TokenHelper;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
