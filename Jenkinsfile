@@ -28,23 +28,23 @@ pipeline {
                 '''
             }
         }
+    }
 
-        post {
-            always {
-                script {
-                    println "Do some actions when always need."
-                }
+    post {
+        always {
+            script {
+                println "Do some actions when always need."
             }
-            failure {
-                script {
-                    println "Do some actions when build failed."
-                }
+        }
+        failure {
+            script {
+                println "Do some actions when build failed."
             }
-            success {
-                script {
-                    println "Do some actions when build success."
-                    allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
-                }
+        }
+        success {
+            script {
+                println "Do some actions when build success."
+                allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
             }
         }
     }
