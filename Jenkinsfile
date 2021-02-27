@@ -34,6 +34,7 @@ pipeline {
         always {
             script {
                 println "Do some actions when always need."
+                allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
             }
         }
         failure {
@@ -44,7 +45,6 @@ pipeline {
         success {
             script {
                 println "Do some actions when build success."
-                allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
             }
         }
     }
