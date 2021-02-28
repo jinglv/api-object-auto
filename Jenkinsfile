@@ -4,7 +4,7 @@ pipeline {
     }
 
     environment {
-        cred_id = '64129bbc-8486-40e0-8e13-3bdc2172052a'
+        cred_id = 'd7f10e03-1795-4e5f-805a-65c5487f4dfc'
     }
 
     parameters {
