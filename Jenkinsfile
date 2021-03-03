@@ -50,7 +50,7 @@ pipeline {
         stage('SonarQube分析') {
             steps {
                 sh '''
-                    sonar-scanner -Dsonar.coverage.jacoco.xmlReportPaths=/root/jacoco-project/report/jacoco.xml -Dsonar.projectKey=spring-boot-restful-api-test -Dsonar.projectName=spring-boot-restful-api-test -Dsonar.language=java -Dsonar.sourceEncoding=UTF-8 -Dsonar.core.codeCoveragePlugin=jacoco -Dsonar.sources=./src/main/java -Dsonar.java.binaries=./target
+                    /usr/local/sonar-scanner/bin/sonar-scanner -Dsonar.coverage.jacoco.xmlReportPaths=/root/jacoco-project/report/jacoco.xml -Dsonar.projectKey=spring-boot-restful-api-test -Dsonar.projectName=spring-boot-restful-api-test -Dsonar.language=java -Dsonar.sourceEncoding=UTF-8 -Dsonar.core.codeCoveragePlugin=jacoco -Dsonar.sources=./src/main/java -Dsonar.java.binaries=./target
                 '''
             }
         }
