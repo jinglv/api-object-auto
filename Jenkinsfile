@@ -42,6 +42,7 @@ pipeline {
                 sh '''
                     cd ..
                     cd SpringBoot-Restful-Api-Docker-Pipeline
+                    pwd
                     java -jar /usr/local/jacoco/lib/jacococli.jar report /root/jacoco-project/jacoco_docker.exec --classfiles=./target/classes --sourcefiles=./src/main/java --html /root/jacoco-project/report/ --xml /root/jacoco-project/report/jacoco.xml
                 '''
             }
@@ -50,6 +51,9 @@ pipeline {
         stage('SonarQube分析') {
             steps {
                 sh '''
+                    cd ..
+                    cd SpringBoot-Restful-Api-Docker-Pipeline
+                    pwd
                     /usr/local/sonar-scanner/bin/sonar-scanner -Dsonar.coverage.jacoco.xmlReportPaths=/root/jacoco-project/report/jacoco.xml -Dsonar.projectKey=spring-boot-restful-api-test -Dsonar.projectName=spring-boot-restful-api-test -Dsonar.language=java -Dsonar.sourceEncoding=UTF-8 -Dsonar.core.codeCoveragePlugin=jacoco -Dsonar.sources=./src/main/java -Dsonar.java.binaries=./target
                 '''
             }
