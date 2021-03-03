@@ -28,6 +28,32 @@ pipeline {
                 '''
             }
         }
+
+        stage('JaCOCO Dump数据') {
+            steps {
+                sh '''
+                    java -jar /usr/local/jacoco/lib/jacococli.jar dump --address 127.0.0.1 --port 6301 --destfile /root/jacoco-project/jacoco_docker.exec
+                '''
+            }
+        }
+
+        stage('JaCOCO测试报告生成') {
+            steps {
+                sh '''
+                    cd ..
+                    cd SpringBoot-Restful-Api-Docker-Pipeline
+                    java -jar /usr/local/jacoco/lib/jacococli.jar report jacoco_docker.exec --classfiles=./target/classes --sourcefiles=./src/main/java --html /root/jacoco-project/report/ --xml /root/jacoco-project/report/jacoco.xml
+                '''
+            }
+        }
+
+        stage('SonarQube分析') {
+            steps {
+                sh '''
+                    sonar-scanner -Dsonar.coverage.jacoco.xmlReportPaths=/root/jacoco-project/report/jacoco.xml -Dsonar.projectKey=spring-boot-restful-api-test -Dsonar.projectName=spring-boot-restful-api-test -Dsonar.language=java -Dsonar.sourceEncoding=UTF-8 -Dsonar.core.codeCoveragePlugin=jacoco -Dsonar.sources=./src/main/java -Dsonar.java.binaries=./target
+                '''
+            }
+        }
     }
 
     post {
