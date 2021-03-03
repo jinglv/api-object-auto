@@ -8,7 +8,6 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.parallel.Execution;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,7 +60,7 @@ class CreateUserInfoThreadTest {
     /**
      * 创建用户信息
      */
-    @RepeatedTest(3)
+    //@RepeatedTest(3)
     @Execution(CONCURRENT)
     @Story("创建用户信息信息接口")
     @Step("新建用户信息")
