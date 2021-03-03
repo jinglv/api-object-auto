@@ -42,7 +42,7 @@ pipeline {
                 sh '''
                     cd ..
                     cd SpringBoot-Restful-Api-Docker-Pipeline
-                    java -jar /usr/local/jacoco/lib/jacococli.jar report jacoco_docker.exec --classfiles=./target/classes --sourcefiles=./src/main/java --html /root/jacoco-project/report/ --xml /root/jacoco-project/report/jacoco.xml
+                    java -jar /usr/local/jacoco/lib/jacococli.jar report /root/jacoco-project/jacoco_docker.exec --classfiles=./target/classes --sourcefiles=./src/main/java --html /root/jacoco-project/report/ --xml /root/jacoco-project/report/jacoco.xml
                 '''
             }
         }
