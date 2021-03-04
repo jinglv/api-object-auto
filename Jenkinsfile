@@ -34,6 +34,7 @@ pipeline {
                 sh '''
                     java -jar /usr/local/jacoco/lib/jacococli.jar dump --address 127.0.0.1 --port 6301 --destfile /root/jacoco-project/jacoco_docker.exec
                 '''
+                jacoco execPattern: '/root/jacoco-project/jacoco_docker.exec'
             }
         }
 
