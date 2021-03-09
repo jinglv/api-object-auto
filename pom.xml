@@ -118,18 +118,18 @@
                             <value>${project.build.directory}/allure-results</value>
                         </property>
                         <!--定义相关连接匹配系统属性规则-->
-                        <property>
-                            <name>allure.link.user.pattern</name>
-                            <value>https://www.xxx.xxx/{}</value>
-                        </property>
-                        <property>
-                            <name>allure.link.issue.pattern</name>
-                            <value>https://www.xxx.xxx/{}</value>
-                        </property>
-                        <property>
-                            <name>allure.link.tms.pattern</name>
-                            <value>https://www.xxx.xxx/{}</value>
-                        </property>
+                        <!--                        <property>-->
+                        <!--                            <name>allure.link.user.pattern</name>-->
+                        <!--                            <value>https://www.xxx.xxx/{}</value>-->
+                        <!--                        </property>-->
+                        <!--                        <property>-->
+                        <!--                            <name>allure.link.issue.pattern</name>-->
+                        <!--                            <value>https://www.xxx.xxx/{}</value>-->
+                        <!--                        </property>-->
+                        <!--                        <property>-->
+                        <!--                            <name>allure.link.tms.pattern</name>-->
+                        <!--                            <value>https://www.xxx.xxx/{}</value>-->
+                        <!--                        </property>-->
                     </systemProperties>
                 </configuration>
                 <dependencies>
