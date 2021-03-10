@@ -1,5 +1,6 @@
 package com.api.test.utils;
 
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -36,13 +37,13 @@ public class RequestUtils {
     public static Response run(String method, String path, String contentType, Map<String, Object> headers, String body) {
         logger.info("请求数据，请求方法:{},请求路径:{},请求文本类型:{},请求头信息:{},请求主体:{}", method, path, contentType, JSONUtil.parse(headers), JSONUtil.parse(body));
         RequestSpecification requestSpecification = given().log().all();
-        if (contentType != null) {
+        if (StrUtil.isNotBlank(contentType)) {
             requestSpecification.contentType(contentType);
         }
-        if (headers != null) {
+        if (StrUtil.isNotBlank(contentType)) {
             requestSpecification.headers(headers);
         }
-        if (body != null) {
+        if (StrUtil.isNotBlank(contentType)) {
             requestSpecification.body(body);
         }
         // 将拼装好的接口进行请求
