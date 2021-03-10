@@ -1,11 +1,9 @@
 package com.api.test.object;
 
-import io.restassured.http.ContentType;
+import com.api.test.utils.RequestUtils;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static io.restassured.RestAssured.given;
 
 /**
  * 用户登录接口对象
@@ -25,13 +23,6 @@ public class UserLoginApiObject {
      */
     public static Response userLogin(String userLoginBody) {
         logger.info("用户登录ApiObject，接口请求主体：{}", userLoginBody);
-        return given()
-                .when()
-                .contentType(ContentType.JSON)
-                .body(userLoginBody)
-                .get("/user/login")
-                .then()
-                .log().body()
-                .extract().response();
+        return RequestUtils.run("get", "/user/login", "application/json", null, userLoginBody);
     }
 }

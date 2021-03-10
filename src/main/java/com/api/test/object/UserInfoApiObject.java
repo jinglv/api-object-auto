@@ -1,10 +1,12 @@
 package com.api.test.object;
 
+import com.api.test.utils.RequestUtils;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static io.restassured.RestAssured.given;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 用户信息接口对象
@@ -15,6 +17,7 @@ import static io.restassured.RestAssured.given;
 public class UserInfoApiObject {
 
     private static final Logger logger = LoggerFactory.getLogger(UserInfoApiObject.class);
+    private static final Map<String, Object> HEADER_MAP = new HashMap<>();
 
     /**
      * 创建用户信息
@@ -25,17 +28,8 @@ public class UserInfoApiObject {
      */
     public static Response creatUserInfo(String userInfoBody, String token) {
         logger.info("创建用户信息ApiObject，请求主体：{},请求携带token：{}", userInfoBody, token);
-        return given()
-                .log().all()
-                .when()
-                .contentType("application/json")
-                .header("token", token)
-                .body(userInfoBody)
-                .post("/info/user")
-                .then()
-                .log().all()
-                .extract()
-                .response();
+        HEADER_MAP.put("token", token);
+        return RequestUtils.run("post", "/info/user", "application/json", HEADER_MAP, userInfoBody);
     }
 
     /**
@@ -46,16 +40,8 @@ public class UserInfoApiObject {
      */
     public static Response findAllUserInfo(String token) {
         logger.info("查询所有用户信息ApiObject，请求携带token：{}", token);
-        return given()
-                .when()
-                .log().all()
-                .contentType("application/json")
-                .header("token", token)
-                .get("/info/user")
-                .then()
-                .log().body()
-                .extract()
-                .response();
+        HEADER_MAP.put("token", token);
+        return RequestUtils.run("get", "/info/user", "application/json", HEADER_MAP, null);
     }
 
     /**
@@ -67,16 +53,8 @@ public class UserInfoApiObject {
      */
     public static Response findUserInfoByUserId(Integer userId, String token) {
         logger.info("通过userId查询用户信息ApiObject，请求UserId：{}，请求携带token：{}", userId, token);
-        return given()
-                .when()
-                .log().all()
-                .contentType("application/json")
-                .header("token", token)
-                .get("/info/user/" + userId)
-                .then()
-                .log().body()
-                .extract()
-                .response();
+        HEADER_MAP.put("token", token);
+        return RequestUtils.run("get", "/info/user/" + userId, "application/json", HEADER_MAP, null);
     }
 
     /**
@@ -89,17 +67,8 @@ public class UserInfoApiObject {
      */
     public static Response updateUserInfoByUserId(Integer userId, String updateUserInfoBody, String token) {
         logger.info("通过userId更新用户信息ApiObject，请求UserId：{}，请求更新用户信息主体：{}，请求携带token：{}", userId, updateUserInfoBody, token);
-        return given()
-                .when()
-                .log().all()
-                .contentType("application/json")
-                .header("token", token)
-                .body(updateUserInfoBody)
-                .put("/info/user/" + userId)
-                .then()
-                .log().body()
-                .extract()
-                .response();
+        HEADER_MAP.put("token", token);
+        return RequestUtils.run("put", "/info/user/" + userId, "application/json", HEADER_MAP, updateUserInfoBody);
     }
 
     /**
@@ -111,15 +80,7 @@ public class UserInfoApiObject {
      */
     public static Response deleteUserInfoByUserId(Integer userId, String token) {
         logger.info("通过userId删除用户信息ApiObject，请求UserId：{}，请求携带token：{}", userId, token);
-        return given()
-                .when()
-                .log().all()
-                .contentType("application/json")
-                .header("token", token)
-                .delete("/info/user/" + userId)
-                .then()
-                .log().body()
-                .extract()
-                .response();
+        HEADER_MAP.put("token", token);
+        return RequestUtils.run("delete", "/info/user/" + userId, "application/json", HEADER_MAP, null);
     }
 }
