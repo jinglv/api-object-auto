@@ -13,6 +13,12 @@ public class RunPythonUtils {
     public RunPythonUtils() {
     }
 
+    /**
+     * Python执行方法
+     *
+     * @param path Python代码地址
+     * @return 返回执行结果
+     */
     public static Object runPython(String path) {
         Process proc;
         try {

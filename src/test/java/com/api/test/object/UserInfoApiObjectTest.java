@@ -131,7 +131,7 @@ class UserInfoApiObjectTest {
         String updateUserInfoBody = "{\n" +
                 "    \"userId\":" + userId + ",\n" +
                 "    \"userName\":\"小红红\",\n" +
-                "    \"email\":\"xiaohong红@qq.com\",\n" +
+                "    \"email\":\"xiaohonghong@qq.com\",\n" +
                 "    \"phone\":\"18623456543\"\n" +
                 "}";
         logger.info("更新用户信息请求body：{}", JSONUtil.parse(updateUserInfoBody));

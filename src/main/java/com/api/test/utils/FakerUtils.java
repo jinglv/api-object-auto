@@ -10,6 +10,8 @@ import java.util.Map;
 import static com.api.test.utils.RunPythonUtils.runPython;
 
 /**
+ * 测试数据生成数据类
+ *
  * @author jingLv
  * @date 2020/07/27
  */
@@ -94,6 +96,11 @@ public class FakerUtils {
         return bankInfo;
     }
 
+    /**
+     * 随机生成姓名、身份证号、邮箱、电话号码等信息
+     *
+     * @return 返回信息Map
+     */
     public static Map<String, Object> randomFourInfo() {
         Map<String, Object> fourInfo = new HashMap<>(16);
         String info = (String) runPython("src/main/resources/python/four_info.py");

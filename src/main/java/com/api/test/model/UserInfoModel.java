@@ -1,6 +1,8 @@
 package com.api.test.model;
 
 /**
+ * 用户信息实体
+ *
  * @author jingLv
  * @date 2021/01/06
  */
