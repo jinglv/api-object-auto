@@ -9116,3 +9116,549 @@
 2021-03-03 18:42:10 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.*":"all change"}
 2021-03-03 18:42:15 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$..book[0,1]":"first two change"}
 2021-03-03 18:42:20 INFO  MustacheUtils:43 - 读取模板文件:mustache/book.mustache，替换的内容:{"author":"mustacheAuthor","price":56.8}
+2021-03-10 16:10:23 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.book[*].author":"测试作者"}
+2021-03-10 16:10:23 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.*":"all change"}
+2021-03-10 16:10:23 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$..book[0,1]":"first two change"}
+2021-03-10 16:10:23 INFO  MustacheUtils:43 - 读取模板文件:mustache/book.mustache，替换的内容:{"author":"mustacheAuthor","price":56.8}
+2021-03-10 16:10:24 INFO  UserLoginApiObject:27 - 用户登录ApiObject，接口请求主体：{
+    "username":"xiaohong",
+    "password":"123123"
+}
+2021-03-10 16:10:26 INFO  UserInfoApiObjectTest:42 - 获取接口token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:26 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:28 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"沈倩","userId":56,"phoneNumber":"13289142593","email":"18537389231@qq.com"}
+2021-03-10 16:10:28 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":56,
+"userName":"沈倩",
+"email":"18537389231@qq.com",
+"phone":"13289142593",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:28 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:28 INFO  UserInfoApiObjectTest:160 - 获取到的UserId：56
+2021-03-10 16:10:28 INFO  UserInfoApiObjectTest:161 - 通过UserId删除用户信息
+2021-03-10 16:10:28 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：56，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:28 INFO  UserInfoApiObjectTest:164 - 通过UserId删除用户信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 56,
+        "userName": "沈倩",
+        "email": "18537389231@qq.com",
+        "phone": "13289142593",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+2021-03-10 16:10:28 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:28 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:28 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"王瑞","userId":97,"phoneNumber":"13802136427","email":"13783108916@qq.com"}
+2021-03-10 16:10:28 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":97,
+"userName":"王瑞",
+"email":"13783108916@qq.com",
+"phone":"13802136427",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:28 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:29 INFO  UserInfoApiObjectTest:130 - 获取到的UserId：97
+2021-03-10 16:10:29 INFO  UserInfoApiObjectTest:137 - 更新用户信息请求body：{"userName":"小红红","userId":97,"phone":"18623456543","email":"xiaohong红@qq.com"}
+2021-03-10 16:10:29 INFO  UserInfoApiObjectTest:138 - 通过UserId更新用户信息
+2021-03-10 16:10:29 INFO  UserInfoApiObject:91 - 通过userId更新用户信息ApiObject，请求UserId：97，请求更新用户信息主体：{
+    "userId":97,
+    "userName":"小红红",
+    "email":"xiaohong红@qq.com",
+    "phone":"18623456543"
+}，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:29 INFO  UserInfoApiObjectTest:141 - 通过UserId更新用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 97,
+        "userName": "小红红",
+        "email": "xiaohong红@qq.com",
+        "phone": "18623456543",
+        "friends": null
+    },
+    "success": true
+}
+2021-03-10 16:10:29 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:29 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：97，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:29 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:29 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"杨凯","userId":39,"phoneNumber":"18675435244","email":"15261002426@qq.com"}
+2021-03-10 16:10:29 INFO  UserInfoApiObjectTest:63 - 创建用户信息请求body：{"userName":"杨凯","userId":39,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"18675435244","email":"15261002426@qq.com"}
+2021-03-10 16:10:30 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"张凤兰","userId":60,"phoneNumber":"13418383061","email":"18920243496@qq.com"}
+2021-03-10 16:10:30 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":60,
+"userName":"张凤兰",
+"email":"18920243496@qq.com",
+"phone":"13418383061",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:30 INFO  UserInfoApiObjectTest:65 - 创建用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 60,
+        "userName": "张凤兰",
+        "email": "18920243496@qq.com",
+        "phone": "13418383061",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+2021-03-10 16:10:30 INFO  UserInfoApiObjectTest:66 - 创建用户信息测试结果断言
+2021-03-10 16:10:30 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:30 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：60，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:30 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:30 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"黎丽娟","userId":33,"phoneNumber":"13161727991","email":"13294144939@qq.com"}
+2021-03-10 16:10:30 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":33,
+"userName":"黎丽娟",
+"email":"13294144939@qq.com",
+"phone":"13161727991",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:30 INFO  UserInfoApiObjectTest:86 - 查询所有用户信息
+2021-03-10 16:10:30 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:30 INFO  UserInfoApiObjectTest:89 - 查询所有用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": [
+        {
+            "userId": 33,
+            "userName": "黎丽娟",
+            "email": "13294144939@qq.com",
+            "phone": "13161727991",
+            "friends": [
+                {
+                    "userId": 11,
+                    "userName": "小红喵",
+                    "email": "xiaohongmiao@qq.com",
+                    "phone": "18623456555",
+                    "friends": null
+                },
+                {
+                    "userId": 12,
+                    "userName": "小红旺",
+                    "email": "xiaohongwang@qq.com",
+                    "phone": "18623456566",
+                    "friends": null
+                }
+            ]
+        }
+    ],
+    "success": true
+}
+2021-03-10 16:10:30 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:31 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：33，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:31 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:31 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"唐桂荣","userId":14,"phoneNumber":"18071587791","email":"15629761322@qq.com"}
+2021-03-10 16:10:31 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":14,
+"userName":"唐桂荣",
+"email":"15629761322@qq.com",
+"phone":"18071587791",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:31 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:31 INFO  UserInfoApiObjectTest:106 - 通过UserId查询用户信息
+2021-03-10 16:10:31 INFO  UserInfoApiObjectTest:109 - 获取到的UserId：14
+2021-03-10 16:10:31 INFO  UserInfoApiObject:69 - 通过userId查询用户信息ApiObject，请求UserId：14，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:31 INFO  UserInfoApiObjectTest:111 - 通过UserId查询用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 14,
+        "userName": "唐桂荣",
+        "email": "15629761322@qq.com",
+        "phone": "18071587791",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+2021-03-10 16:10:31 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:10:31 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：14，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NjI2fQ.MUJ8SAfW-K4vRystMsH9kA8lHWQvwJJx5Cg2IX3bZZM
+2021-03-10 16:12:42 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.book[*].author":"测试作者"}
+2021-03-10 16:12:42 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$.store.*":"all change"}
+2021-03-10 16:12:42 INFO  JsonPathUtils:54 - 读取JSON文件:/json/book.json，替换的内容:{"$..book[0,1]":"first two change"}
+2021-03-10 16:12:42 INFO  MustacheUtils:43 - 读取模板文件:mustache/book.mustache，替换的内容:{"author":"mustacheAuthor","price":56.8}
+2021-03-10 16:12:43 INFO  UserLoginApiObject:27 - 用户登录ApiObject，接口请求主体：{
+    "username":"xiaohong",
+    "password":"123123"
+}
+2021-03-10 16:12:45 INFO  UserInfoApiObjectTest:42 - 获取接口token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:45 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:46 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"邱颖","userId":82,"phoneNumber":"14556291732","email":"18699564474@qq.com"}
+2021-03-10 16:12:46 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":82,
+"userName":"邱颖",
+"email":"18699564474@qq.com",
+"phone":"14556291732",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:46 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:46 INFO  UserInfoApiObjectTest:160 - 获取到的UserId：82
+2021-03-10 16:12:46 INFO  UserInfoApiObjectTest:161 - 通过UserId删除用户信息
+2021-03-10 16:12:46 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：82，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:46 INFO  UserInfoApiObjectTest:164 - 通过UserId删除用户信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 82,
+        "userName": "邱颖",
+        "email": "18699564474@qq.com",
+        "phone": "14556291732",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+2021-03-10 16:12:46 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:46 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:46 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"季志强","userId":22,"phoneNumber":"15644288996","email":"13649695558@qq.com"}
+2021-03-10 16:12:46 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":22,
+"userName":"季志强",
+"email":"13649695558@qq.com",
+"phone":"15644288996",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:47 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:47 INFO  UserInfoApiObjectTest:130 - 获取到的UserId：22
+2021-03-10 16:12:47 INFO  UserInfoApiObjectTest:137 - 更新用户信息请求body：{"userName":"小红红","userId":22,"phone":"18623456543","email":"xiaohong红@qq.com"}
+2021-03-10 16:12:47 INFO  UserInfoApiObjectTest:138 - 通过UserId更新用户信息
+2021-03-10 16:12:47 INFO  UserInfoApiObject:91 - 通过userId更新用户信息ApiObject，请求UserId：22，请求更新用户信息主体：{
+    "userId":22,
+    "userName":"小红红",
+    "email":"xiaohong红@qq.com",
+    "phone":"18623456543"
+}，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:47 INFO  UserInfoApiObjectTest:141 - 通过UserId更新用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 22,
+        "userName": "小红红",
+        "email": "xiaohong红@qq.com",
+        "phone": "18623456543",
+        "friends": null
+    },
+    "success": true
+}
+2021-03-10 16:12:47 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:47 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：22，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:47 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:47 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"常娜","userId":26,"phoneNumber":"18586475991","email":"18524691147@qq.com"}
+2021-03-10 16:12:47 INFO  UserInfoApiObjectTest:63 - 创建用户信息请求body：{"userName":"常娜","userId":26,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"18586475991","email":"18524691147@qq.com"}
+2021-03-10 16:12:48 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"唐彬","userId":82,"phoneNumber":"13191559224","email":"18908662955@qq.com"}
+2021-03-10 16:12:48 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":82,
+"userName":"唐彬",
+"email":"18908662955@qq.com",
+"phone":"13191559224",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:48 INFO  UserInfoApiObjectTest:65 - 创建用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 82,
+        "userName": "唐彬",
+        "email": "18908662955@qq.com",
+        "phone": "13191559224",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+2021-03-10 16:12:48 INFO  UserInfoApiObjectTest:66 - 创建用户信息测试结果断言
+2021-03-10 16:12:48 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:48 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：82，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:48 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:48 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"纪帅","userId":83,"phoneNumber":"13573687675","email":"13114506240@qq.com"}
+2021-03-10 16:12:48 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":83,
+"userName":"纪帅",
+"email":"13114506240@qq.com",
+"phone":"13573687675",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:48 INFO  UserInfoApiObjectTest:86 - 查询所有用户信息
+2021-03-10 16:12:48 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:48 INFO  UserInfoApiObjectTest:89 - 查询所有用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": [
+        {
+            "userId": 83,
+            "userName": "纪帅",
+            "email": "13114506240@qq.com",
+            "phone": "13573687675",
+            "friends": [
+                {
+                    "userId": 11,
+                    "userName": "小红喵",
+                    "email": "xiaohongmiao@qq.com",
+                    "phone": "18623456555",
+                    "friends": null
+                },
+                {
+                    "userId": 12,
+                    "userName": "小红旺",
+                    "email": "xiaohongwang@qq.com",
+                    "phone": "18623456566",
+                    "friends": null
+                }
+            ]
+        }
+    ],
+    "success": true
+}
+2021-03-10 16:12:49 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:49 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：83，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:49 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:49 INFO  MustacheUtils:43 - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"陈淑兰","userId":12,"phoneNumber":"15747754075","email":"14576368976@qq.com"}
+2021-03-10 16:12:49 INFO  UserInfoApiObject:27 - 创建用户信息ApiObject，请求主体：{
+"userId":12,
+"userName":"陈淑兰",
+"email":"14576368976@qq.com",
+"phone":"15747754075",
+"friends":[
+{
+"userId":11,
+"userName":"小红喵",
+"email":"xiaohongmiao@qq.com",
+"phone":"18623456555"
+},
+{
+"userId":12,
+"userName":"小红旺",
+"email":"xiaohongwang@qq.com",
+"phone":"18623456566"
+}
+]
+},请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:49 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:49 INFO  UserInfoApiObjectTest:106 - 通过UserId查询用户信息
+2021-03-10 16:12:49 INFO  UserInfoApiObjectTest:109 - 获取到的UserId：12
+2021-03-10 16:12:49 INFO  UserInfoApiObject:69 - 通过userId查询用户信息ApiObject，请求UserId：12，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:49 INFO  UserInfoApiObjectTest:111 - 通过UserId查询用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 12,
+        "userName": "陈淑兰",
+        "email": "14576368976@qq.com",
+        "phone": "15747754075",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+2021-03-10 16:12:49 INFO  UserInfoApiObject:48 - 查询所有用户信息ApiObject，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ
+2021-03-10 16:12:49 INFO  UserInfoApiObject:113 - 通过userId删除用户信息ApiObject，请求UserId：12，请求携带token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjE1OTY4NzY0fQ.R-492ZRLF4C4mU4vBJOrviKk4mswvFxBuOj9EpmTAXQ

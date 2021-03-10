@@ -1,0 +1,20 @@
+{
+  "userId": 3,
+  "userName": "小红",
+  "email": "xiaohong@qq.com",
+  "phone": "18623456543",
+  "friends": [
+    {
+      "userId": 11,
+      "userName": "小红喵",
+      "email": "xiaohongmiao@qq.com",
+      "phone": "18623456555"
+    },
+    {
+      "userId": 12,
+      "userName": "小红旺",
+      "email": "xiaohongwang@qq.com",
+      "phone": "18623456566"
+    }
+  ]
+}

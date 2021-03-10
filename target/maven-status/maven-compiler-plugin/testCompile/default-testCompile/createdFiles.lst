@@ -1,0 +1,4 @@
+com/api/test/object/UserInfoApiObjectTest.class
+com/api/test/utils/JsonPathUtilsTest.class
+com/api/test/object/CreateUserInfoThreadTest.class
+com/api/test/utils/MustacheUtilsTest.class
