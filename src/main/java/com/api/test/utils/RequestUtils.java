@@ -1,5 +1,6 @@
 package com.api.test.utils;
 
+import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import io.restassured.response.Response;
@@ -40,14 +41,13 @@ public class RequestUtils {
         if (StrUtil.isNotBlank(contentType)) {
             requestSpecification.contentType(contentType);
         }
-        if (StrUtil.isNotBlank(contentType)) {
+        if (MapUtil.isNotEmpty(headers)) {
             requestSpecification.headers(headers);
         }
-        if (StrUtil.isNotBlank(contentType)) {
+        if (StrUtil.isNotBlank(body)) {
             requestSpecification.body(body);
         }
         // 将拼装好的接口进行请求
         return requestSpecification.request(method, path).then().log().all().extract().response();
     }
-
 }
