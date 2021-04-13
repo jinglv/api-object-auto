@@ -2,22 +2,18 @@ pipeline {
     agent {
         label 'master'
     }
-
     environment {
-        cred_id = 'b4d58207-0fa3-43f5-bf1d-c635025a7684'
+        cred_id = '62d9a573-7996-4e5b-b163-178fdcf4953f'
     }
-
     parameters {
         string(name: 'branch', defaultValue: 'master', description: 'Git branch')
     }
-
     stages {
         stage('检出代码') {
             steps {
                 git credentialsId: cred_id, url: 'https://gitee.com/jeanlv/api-object-auto.git', branch: "$params.branch"
             }
         }
-
         stage('Maven执行测试') {
             steps {
                 sh '''
@@ -28,7 +24,6 @@ pipeline {
                 '''
             }
         }
-
         stage('JaCOCO Dump数据') {
             steps {
                 sh '''
@@ -36,7 +31,6 @@ pipeline {
                 '''
             }
         }
-
         stage('JaCOCO测试报告生成') {
             steps {
                 sh '''
@@ -47,7 +41,6 @@ pipeline {
                 '''
             }
         }
-
         stage('SonarQube分析') {
             steps {
                 sh '''
@@ -59,7 +52,6 @@ pipeline {
             }
         }
     }
-
     post {
         always {
             script {
