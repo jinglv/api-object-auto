@@ -22,7 +22,6 @@ public class UserLoginApiObject {
      * @return response
      */
     public static Response userLogin(String userLoginBody) {
-        logger.info("用户登录ApiObject，接口请求主体：{}", userLoginBody);
         return RequestUtils.run("get", "/user/login", "application/json", null, userLoginBody);
     }
 }

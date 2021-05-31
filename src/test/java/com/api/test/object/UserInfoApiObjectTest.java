@@ -59,9 +59,9 @@ class UserInfoApiObjectTest {
     @DisplayName("创建用户信息")
     @Story("创建用户信息")
     @Description("创建用户信息")
-    void creatUserInfo() {
+    void createUserInfo() {
         logger.info("创建用户信息请求body：{}", JSONUtil.parse(userInfoData()));
-        Response createUserInfoResponse = UserInfoApiObject.creatUserInfo(userInfoData(), token);
+        Response createUserInfoResponse = UserInfoApiObject.createUserInfo(userInfoData(), token);
         logger.info("创建用户信息接口返回信息：{}", createUserInfoResponse.getBody().prettyPrint());
         logger.info("创建用户信息测试结果断言");
         // 使⽤软断⾔，即使⼀个断⾔失败，仍会进⾏进⾏余下的断⾔，然后统⼀输出所有断⾔结果
@@ -82,7 +82,7 @@ class UserInfoApiObjectTest {
     @Description("查询所有用户信息")
     void findAllUserInfo() {
         // 创建用户
-        UserInfoApiObject.creatUserInfo(userInfoData(), token);
+        UserInfoApiObject.createUserInfo(userInfoData(), token);
         logger.info("查询所有用户信息");
         // 查询所有用户信息
         Response findAllUserInfoResponse = UserInfoApiObject.findAllUserInfo(token);
@@ -100,7 +100,7 @@ class UserInfoApiObjectTest {
     @Description("通过UserId查询用户信息")
     void findUserInfoByUserId() {
         // 创建用户
-        UserInfoApiObject.creatUserInfo(userInfoData(), token);
+        UserInfoApiObject.createUserInfo(userInfoData(), token);
         // 查询所有用户信息
         Response findAllUserInfoResponse = UserInfoApiObject.findAllUserInfo(token);
         logger.info("通过UserId查询用户信息");
@@ -122,7 +122,7 @@ class UserInfoApiObjectTest {
     @Description("通过UserId更新用户信息")
     void updateUserInfoByUserId() {
         // 创建用户
-        UserInfoApiObject.creatUserInfo(userInfoData(), token);
+        UserInfoApiObject.createUserInfo(userInfoData(), token);
         // 查询所有用户信息
         Response findAllUserInfoResponse = UserInfoApiObject.findAllUserInfo(token);
         // 获取查询返回的userId
@@ -152,7 +152,7 @@ class UserInfoApiObjectTest {
     @Description("通过UserId删除用户信息")
     void deleteUserInfoByUserId() {
         // 创建用户
-        UserInfoApiObject.creatUserInfo(userInfoData(), token);
+        UserInfoApiObject.createUserInfo(userInfoData(), token);
         // 查询所有用户信息
         Response findAllUserInfoResponse = UserInfoApiObject.findAllUserInfo(token);
         // 获取查询返回的userId

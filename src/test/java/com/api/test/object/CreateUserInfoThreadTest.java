@@ -78,7 +78,7 @@ class CreateUserInfoThreadTest {
         RestfulModel restfulModel = new RestfulModel();
         restfulModel.setBody(userInfoBody);
         logger.info("创建用户信息请求body：{}", JSONUtil.parse(userInfoBody));
-        Response createUserInfoResponse = UserInfoApiObject.creatUserInfo(userInfoBody, token);
+        Response createUserInfoResponse = UserInfoApiObject.createUserInfo(userInfoBody, token);
         getRequestAndRespondBody(restfulModel, createUserInfoResponse);
         logger.info("创建用户信息接口返回信息：{}", createUserInfoResponse.getBody().prettyPrint());
         logger.info("创建用户信息测试结果断言");

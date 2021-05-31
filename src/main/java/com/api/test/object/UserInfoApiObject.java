@@ -26,8 +26,7 @@ public class UserInfoApiObject {
      * @param token        接口token
      * @return response
      */
-    public static Response creatUserInfo(String userInfoBody, String token) {
-        logger.info("创建用户信息ApiObject，请求主体：{},请求携带token：{}", userInfoBody, token);
+    public static Response createUserInfo(String userInfoBody, String token) {
         HEADER_MAP.put("token", token);
         return RequestUtils.run("post", "/info/user", "application/json", HEADER_MAP, userInfoBody);
     }
@@ -39,7 +38,6 @@ public class UserInfoApiObject {
      * @return response
      */
     public static Response findAllUserInfo(String token) {
-        logger.info("查询所有用户信息ApiObject，请求携带token：{}", token);
         HEADER_MAP.put("token", token);
         return RequestUtils.run("get", "/info/user", "application/json", HEADER_MAP, null);
     }
@@ -52,7 +50,6 @@ public class UserInfoApiObject {
      * @return response
      */
     public static Response findUserInfoByUserId(Integer userId, String token) {
-        logger.info("通过userId查询用户信息ApiObject，请求UserId：{}，请求携带token：{}", userId, token);
         HEADER_MAP.put("token", token);
         return RequestUtils.run("get", "/info/user/" + userId, "application/json", HEADER_MAP, null);
     }
@@ -66,7 +63,6 @@ public class UserInfoApiObject {
      * @return response
      */
     public static Response updateUserInfoByUserId(Integer userId, String updateUserInfoBody, String token) {
-        logger.info("通过userId更新用户信息ApiObject，请求UserId：{}，请求更新用户信息主体：{}，请求携带token：{}", userId, updateUserInfoBody, token);
         HEADER_MAP.put("token", token);
         return RequestUtils.run("put", "/info/user/" + userId, "application/json", HEADER_MAP, updateUserInfoBody);
     }
@@ -79,7 +75,6 @@ public class UserInfoApiObject {
      * @return response
      */
     public static Response deleteUserInfoByUserId(Integer userId, String token) {
-        logger.info("通过userId删除用户信息ApiObject，请求UserId：{}，请求携带token：{}", userId, token);
         HEADER_MAP.put("token", token);
         return RequestUtils.run("delete", "/info/user/" + userId, "application/json", HEADER_MAP, null);
     }

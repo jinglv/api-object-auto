@@ -1,0 +1,498 @@
+[ INFO ] 2021-05-31 16:56:35 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/user/login,请求文本类型:application/json,请求头信息:null,请求主体:{"password":"123123","username":"xiaohong"}
+[ INFO ] 2021-05-31 16:56:38 [ main:42 ] com.api.test.object.UserInfoApiObjectTest     - 获取接口token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI
+[ INFO ] 2021-05-31 16:56:38 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:38 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":92,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:38 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:{"userName":"null","userId":92,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:38 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:38 [ main:160 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：92
+[ INFO ] 2021-05-31 16:56:38 [ main:161 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId删除用户信息
+[ INFO ] 2021-05-31 16:56:38 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/92,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:38 [ main:164 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId删除用户信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 92,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 16:56:38 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:38 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:39 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":11,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:{"userName":"null","userId":11,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:39 [ main:130 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：11
+[ INFO ] 2021-05-31 16:56:39 [ main:137 ] com.api.test.object.UserInfoApiObjectTest     - 更新用户信息请求body：{"userName":"小红红","userId":11,"phone":"18623456543","email":"xiaohonghong@qq.com"}
+[ INFO ] 2021-05-31 16:56:39 [ main:138 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId更新用户信息
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:put,请求路径:/info/user/11,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:{"userName":"小红红","userId":11,"phone":"18623456543","email":"xiaohonghong@qq.com"}
+[ INFO ] 2021-05-31 16:56:39 [ main:141 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId更新用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 11,
+        "userName": "小红红",
+        "email": "xiaohonghong@qq.com",
+        "phone": "18623456543",
+        "friends": null
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/11,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:39 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":15,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:39 [ main:63 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息请求body：{"userName":"null","userId":15,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:39 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":94,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:{"userName":"null","userId":94,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:39 [ main:65 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 94,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 16:56:39 [ main:66 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息测试结果断言
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/94,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:39 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":39,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:{"userName":"null","userId":39,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:39 [ main:86 ] com.api.test.object.UserInfoApiObjectTest     - 查询所有用户信息
+[ INFO ] 2021-05-31 16:56:39 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:40 [ main:89 ] com.api.test.object.UserInfoApiObjectTest     - 查询所有用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": [
+        {
+            "userId": 39,
+            "userName": "null",
+            "email": "null",
+            "phone": "null",
+            "friends": [
+                {
+                    "userId": 11,
+                    "userName": "小红喵",
+                    "email": "xiaohongmiao@qq.com",
+                    "phone": "18623456555",
+                    "friends": null
+                },
+                {
+                    "userId": 12,
+                    "userName": "小红旺",
+                    "email": "xiaohongwang@qq.com",
+                    "phone": "18623456566",
+                    "friends": null
+                }
+            ]
+        }
+    ],
+    "success": true
+}
+[ INFO ] 2021-05-31 16:56:40 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:40 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/39,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:40 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:40 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":74,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:40 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:{"userName":"null","userId":74,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 16:56:40 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:40 [ main:106 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId查询用户信息
+[ INFO ] 2021-05-31 16:56:40 [ main:109 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：74
+[ INFO ] 2021-05-31 16:56:40 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user/74,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:40 [ main:111 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId查询用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 74,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 16:56:40 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 16:56:40 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/74,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2MTk3fQ.vaVnfpDapG5_1pznfYNw4jErdHmRRu60G6HH2iS2LtI"},请求主体:null
+[ INFO ] 2021-05-31 17:04:25 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/user/login,请求文本类型:application/json,请求头信息:null,请求主体:{"password":"123123","username":"xiaohong"}
+[ INFO ] 2021-05-31 17:04:27 [ main:42 ] com.api.test.object.UserInfoApiObjectTest     - 获取接口token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU
+[ INFO ] 2021-05-31 17:04:27 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:28 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":69,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:{"userName":"null","userId":69,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:28 [ main:160 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：69
+[ INFO ] 2021-05-31 17:04:28 [ main:161 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId删除用户信息
+[ INFO ] 2021-05-31 17:04:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/69,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:28 [ main:164 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId删除用户信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 69,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 17:04:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:28 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":53,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:{"userName":"null","userId":53,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:28 [ main:130 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：53
+[ INFO ] 2021-05-31 17:04:28 [ main:137 ] com.api.test.object.UserInfoApiObjectTest     - 更新用户信息请求body：{"userName":"小红红","userId":53,"phone":"18623456543","email":"xiaohonghong@qq.com"}
+[ INFO ] 2021-05-31 17:04:28 [ main:138 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId更新用户信息
+[ INFO ] 2021-05-31 17:04:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:put,请求路径:/info/user/53,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:{"userName":"小红红","userId":53,"phone":"18623456543","email":"xiaohonghong@qq.com"}
+[ INFO ] 2021-05-31 17:04:29 [ main:141 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId更新用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 53,
+        "userName": "小红红",
+        "email": "xiaohonghong@qq.com",
+        "phone": "18623456543",
+        "friends": null
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/53,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:29 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":58,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:29 [ main:63 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息请求body：{"userName":"null","userId":58,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:29 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":14,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:{"userName":"null","userId":14,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:29 [ main:65 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 14,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 17:04:29 [ main:66 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息测试结果断言
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/14,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:29 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":19,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:{"userName":"null","userId":19,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:29 [ main:86 ] com.api.test.object.UserInfoApiObjectTest     - 查询所有用户信息
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:29 [ main:89 ] com.api.test.object.UserInfoApiObjectTest     - 查询所有用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": [
+        {
+            "userId": 19,
+            "userName": "null",
+            "email": "null",
+            "phone": "null",
+            "friends": [
+                {
+                    "userId": 11,
+                    "userName": "小红喵",
+                    "email": "xiaohongmiao@qq.com",
+                    "phone": "18623456555",
+                    "friends": null
+                },
+                {
+                    "userId": 12,
+                    "userName": "小红旺",
+                    "email": "xiaohongwang@qq.com",
+                    "phone": "18623456566",
+                    "friends": null
+                }
+            ]
+        }
+    ],
+    "success": true
+}
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/19,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:30 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":27,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:{"userName":"null","userId":27,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:04:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:30 [ main:106 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId查询用户信息
+[ INFO ] 2021-05-31 17:04:30 [ main:109 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：27
+[ INFO ] 2021-05-31 17:04:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user/27,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:30 [ main:111 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId查询用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 27,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 17:04:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:04:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/27,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU2NjY2fQ.UigWxW3rZ7oYshDQTr00dDoJIeYV-58QuUeKXg_FbfU"},请求主体:null
+[ INFO ] 2021-05-31 17:17:25 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/user/login,请求文本类型:application/json,请求头信息:null,请求主体:{"password":"123123","username":"xiaohong"}
+[ INFO ] 2021-05-31 17:17:28 [ main:42 ] com.api.test.object.UserInfoApiObjectTest     - 获取接口token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0
+[ INFO ] 2021-05-31 17:17:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:28 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":54,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:{"userName":"null","userId":54,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:28 [ main:160 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：54
+[ INFO ] 2021-05-31 17:17:28 [ main:161 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId删除用户信息
+[ INFO ] 2021-05-31 17:17:28 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/54,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:28 [ main:164 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId删除用户信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 54,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:29 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":52,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:{"userName":"null","userId":52,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:29 [ main:130 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：52
+[ INFO ] 2021-05-31 17:17:29 [ main:137 ] com.api.test.object.UserInfoApiObjectTest     - 更新用户信息请求body：{"userName":"小红红","userId":52,"phone":"18623456543","email":"xiaohonghong@qq.com"}
+[ INFO ] 2021-05-31 17:17:29 [ main:138 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId更新用户信息
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:put,请求路径:/info/user/52,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:{"userName":"小红红","userId":52,"phone":"18623456543","email":"xiaohonghong@qq.com"}
+[ INFO ] 2021-05-31 17:17:29 [ main:141 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId更新用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 52,
+        "userName": "小红红",
+        "email": "xiaohonghong@qq.com",
+        "phone": "18623456543",
+        "friends": null
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/52,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:29 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":39,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:29 [ main:63 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息请求body：{"userName":"null","userId":39,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:29 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":77,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:29 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:{"userName":"null","userId":77,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:30 [ main:65 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 77,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 17:17:30 [ main:66 ] com.api.test.object.UserInfoApiObjectTest     - 创建用户信息测试结果断言
+[ INFO ] 2021-05-31 17:17:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/77,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:30 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":86,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:{"userName":"null","userId":86,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:30 [ main:86 ] com.api.test.object.UserInfoApiObjectTest     - 查询所有用户信息
+[ INFO ] 2021-05-31 17:17:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:30 [ main:89 ] com.api.test.object.UserInfoApiObjectTest     - 查询所有用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": [
+        {
+            "userId": 86,
+            "userName": "null",
+            "email": "null",
+            "phone": "null",
+            "friends": [
+                {
+                    "userId": 11,
+                    "userName": "小红喵",
+                    "email": "xiaohongmiao@qq.com",
+                    "phone": "18623456555",
+                    "friends": null
+                },
+                {
+                    "userId": 12,
+                    "userName": "小红旺",
+                    "email": "xiaohongwang@qq.com",
+                    "phone": "18623456566",
+                    "friends": null
+                }
+            ]
+        }
+    ],
+    "success": true
+}
+[ INFO ] 2021-05-31 17:17:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/86,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:30 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:31 [ main:43 ]      com.api.test.utils.MustacheUtils     - 读取模板文件:mustache/userInfo.mustache，替换的内容:{"userName":"null","userId":68,"phoneNumber":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:31 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:post,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:{"userName":"null","userId":68,"friends":[{"userName":"小红喵","userId":11,"phone":"18623456555","email":"xiaohongmiao@qq.com"},{"userName":"小红旺","userId":12,"phone":"18623456566","email":"xiaohongwang@qq.com"}],"phone":"null","email":"null"}
+[ INFO ] 2021-05-31 17:17:31 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:31 [ main:106 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId查询用户信息
+[ INFO ] 2021-05-31 17:17:31 [ main:109 ] com.api.test.object.UserInfoApiObjectTest     - 获取到的UserId：68
+[ INFO ] 2021-05-31 17:17:31 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user/68,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:31 [ main:111 ] com.api.test.object.UserInfoApiObjectTest     - 通过UserId查询用户信息接口返回信息：{
+    "code": "00000",
+    "message": "成功",
+    "data": {
+        "userId": 68,
+        "userName": "null",
+        "email": "null",
+        "phone": "null",
+        "friends": [
+            {
+                "userId": 11,
+                "userName": "小红喵",
+                "email": "xiaohongmiao@qq.com",
+                "phone": "18623456555",
+                "friends": null
+            },
+            {
+                "userId": 12,
+                "userName": "小红旺",
+                "email": "xiaohongwang@qq.com",
+                "phone": "18623456566",
+                "friends": null
+            }
+        ]
+    },
+    "success": true
+}
+[ INFO ] 2021-05-31 17:17:31 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:get,请求路径:/info/user,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
+[ INFO ] 2021-05-31 17:17:31 [ main:39 ]       com.api.test.utils.RequestUtils     - 请求数据，请求方法:delete,请求路径:/info/user/68,请求文本类型:application/json,请求头信息:{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VyTmFtZSI6InhpYW9ob25nIiwiZXhwIjoxNjIzMDU3NDQ3fQ.blPM2qHlBMeqlT5Z6AcP3NMxKUxZnfRKhkLEU0j6oG0"},请求主体:null
